@@ -6,7 +6,6 @@ Laivu musis
 1 Destroyer, 3 spots
 1 Submarine, 3 spots
 1 Patrol Boat, 2 spots
-Neveikia su inputu 2 4 4 2 4 6 1 2 5 1 8 0 2 3 9, kai m raide 8;6 koordinateje, o AI krypti atspeja i desine nuo 6;6
 */
 
 #include <iostream>
@@ -162,7 +161,6 @@ public:
 			return false;
 		Coordinates start;
 		Coordinates end;
-
 		if (direction == 1)
 		{
 			if (c.y + laivas > 10)
@@ -518,7 +516,6 @@ public:
 	}
 };
 
-
 int main()
 {
 	SetConsoleTextAttribute(hConsole, (FOREGROUND_BLUE | FOREGROUND_INTENSITY | BACKGROUND_BLUE | BACKGROUND_GREEN | BACKGROUND_RED));
@@ -538,7 +535,6 @@ int main()
 	bool hit1 = false;
 	pair<int, int> nexthit;
 	pair<int, int> firsthit;
-
 	while (true)
 	{
 		p1.PrintBoard();
@@ -668,7 +664,6 @@ int main()
 						break;
 				}
 			}
-
 			if (p1.Hit(nexthit))
 			{
 
