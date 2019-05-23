@@ -7,7 +7,6 @@ Laivu musis
 1 Submarine, 3 spots
 1 Patrol Boat, 2 spots
 */
-
 #include <iostream>
 #include <cmath>
 #include <string>
@@ -417,9 +416,9 @@ public:
 			{
 				if (j == 0)
 				{
-					cout << i << " " << A[i][j] << " ";
+					cout << i << " " << Hidden[i][j] << " ";
 				}
-				else cout << A[i][j] << " ";
+				else cout << Hidden[i][j] << " ";
 			}
 		}
 		gotoxy(0, 15);
