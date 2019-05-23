@@ -307,13 +307,18 @@ public:
 			return true;
 		else return false;
 	}
-	void healthdown() { health--; }
 	bool good(int x, int y)
 	{
 		if (A[y][x] == "s" || A[y][x] == "m" || A[y][x] == "." || A[y][x] == "X" || x > 9 || x < 0 || y > 9 || y < 0)
 			return false;
 		else return true;
 	}
+
+	void operator--()
+	{
+		health--;
+	}
+
 	~Player()
 	{
 		for (int i = 0; i < TABLE; i++)
@@ -412,9 +417,9 @@ public:
 			{
 				if (j == 0)
 				{
-					cout << i << " " << Hidden[i][j] << " ";
+					cout << i << " " << A[i][j] << " ";
 				}
-				else cout << Hidden[i][j] << " ";
+				else cout << A[i][j] << " ";
 			}
 		}
 		gotoxy(0, 15);
@@ -552,7 +557,7 @@ int main()
 			if (c1.Hit1(hit))
 			{
 				c1.isCPUSunk();
-				c1.healthdown();
+				--c1;
 			}
 			turn = 2;
 		}
@@ -666,8 +671,7 @@ int main()
 			}
 			if (p1.Hit(nexthit))
 			{
-
-				p1.healthdown();
+				--p1;
 				hit1 = true;
 				if (steps == 1)
 				{
@@ -736,7 +740,7 @@ int main()
 			break;
 		}
 	}
-	cout << "ZAIDIMAS BAIGIASI";
+	cout << "ZAIDIMAS BAIGIASI\n";
 	return 0;
 }
 
