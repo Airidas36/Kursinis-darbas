@@ -1,2 +1,3 @@
 # Kursinis-darbas
-Laivų mušio žaidimas, C++ OOP
+Battleships game, made as a project for
+Objective C++ course.
